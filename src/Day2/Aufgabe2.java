@@ -10,9 +10,12 @@ public class Aufgabe2 {
 
     public void run(){
         Filereader filereader = new Filereader();
-        Compute compute = new Compute();
+        //Compute compute = new Compute();
+        ComputeAdvanced computeAdvanced = new ComputeAdvanced();
 
-        int zahl = compute.compute(filereader.read());
-        System.out.println(zahl);
+        //int zahl = compute.compute(filereader.read());
+        int zahl2 = computeAdvanced.compute(filereader.read());
+
+        System.out.println(zahl2);
     }
 }

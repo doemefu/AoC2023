@@ -6,16 +6,15 @@ import java.util.HashMap;
 public class ComputeAdvanced {
 
     public int compute(HashMap<Integer, ArrayList<String>> inputList){
-        int redMax = 12;
-        int greenMax = 13;
-        int blueMax = 14;
+
 
         int summe = 0;
 
-        boolean overflow;
-
         for (int i = 1; i <= inputList.size(); i++) {
-            overflow = false;
+
+            int redMin = 0;
+            int greenMin = 0;
+            int blueMin = 0;
 
             ArrayList<String> value = inputList.get(i);
             int zahl=0;
@@ -26,30 +25,20 @@ public class ComputeAdvanced {
 
                 zahl = Integer.parseInt(eintrag.substring(0, eintrag.indexOf(" ")));
 
-                if(eintrag.contains("red") && zahl > redMax){
-                    overflow = true;
-                    System.out.println(value);
-                    System.out.println("red");
-                    break;
+                if(eintrag.contains("red") && zahl > redMin){
+                    redMin = zahl;
                 }
-                if(eintrag.contains("green") && zahl > greenMax){
-                    overflow = true;
-                    System.out.println(value);
-                    System.out.println("green");
-                    break;
+                if(eintrag.contains("green") && zahl > greenMin){
+                    greenMin = zahl;
                 }
 
-                if(eintrag.contains("blue") && zahl > blueMax) {
-                    overflow = true;
-                    System.out.println(value);
-                    System.out.println("blue");
-                    break;
+                if(eintrag.contains("blue") && zahl > blueMin) {
+                    blueMin = zahl;
                 }
             }
 
-            if(!overflow){
-                summe += i;
-            }
+            summe += redMin * greenMin * blueMin;
+
         }
 
         return summe;
