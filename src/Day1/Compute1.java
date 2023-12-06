@@ -4,7 +4,7 @@ import java.util.List;
 
 import static java.lang.Character.isDigit;
 
-public class Compute {
+public class Compute1 {
     public int compute(List<String> inputFile){
         int summe = 0;
 

@@ -3,7 +3,7 @@ package Day2;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Compute {
+public class Compute2 {
 
     public int compute(HashMap<Integer, ArrayList<String>> inputList){
         int redMax = 12;

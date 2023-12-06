@@ -8,8 +8,8 @@ public class Aufgabe1 {
 
     public void run(){
         Filereader filereader = new Filereader();
-        Compute compute = new Compute();
+        Compute1 compute1 = new Compute1();
 
-        System.out.println(compute.compute(filereader.read()));
+        System.out.println(compute1.compute(filereader.read()));
     }
 }

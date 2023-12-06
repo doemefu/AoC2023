@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 import static java.lang.Character.isDigit;
 
-public class Compute {
+public class Compute3 {
 
     Character[] symbols =  {'/', '#', '%', '=', '@', '$', '&', '+', '-', '*'};
     Character[][] input;
